@@ -1,0 +1,222 @@
+---
+title: "Les langages de balisage en sciences sociales"
+subtitle: "Un atelier pratique pour l'EIOM"
+author: "Étienne Proulx"
+format:
+  revealjs:
+    theme: default
+    transition: slide
+    highlight-style: github
+    code-line-numbers: true
+    chalkboard: true
+    multiplex: false
+    preview-links: auto
+---
+
+## Introduction {.center}
+
+::: {.incremental}
+- Pourquoi utiliser des langages de balisage ?
+- Avantages pour les étudiant·e·s de l'EIOM
+- Tour d'horizon des outils disponibles
+:::
+
+---
+
+## Histoire et contexte
+
+### D'où viennent les langages de balisage ?
+
+::: {.incremental}
+- **1960s-70s** : IBM GML (Generalized Markup Language)
+- **1986** : SGML standardisé (ISO 8879)
+- **1989** : HTML créé par Tim Berners-Lee
+- **1998** : XML simplifie SGML
+- **2004** : Markdown par John Gruber
+:::
+
+---
+
+## Pourquoi c'est utile pour l'EIOM ?
+
+### Les défis de la recherche moderne
+
+::: {.incremental}
+- **Reproductibilité** : code et texte dans un seul document
+- **Collaboration** : versions, commentaires, révisions
+- **Formats multiples** : PDF, HTML, Word, slides...
+- **Équations et références** : gestion automatisée
+- **Intégration données** : graphiques, tableaux dynamiques
+:::
+
+---
+
+## Avantages vs. inconvénients
+
+::: {.columns}
+
+::: {.column width="50%"}
+### ✅ Avantages
+- Séparation contenu/forme
+- Contrôle de version (Git)
+- Automatisation
+- Formats ouverts
+- Intégration code/texte
+:::
+
+::: {.column width="50%"}
+### ❌ Inconvénients  
+- Courbe d'apprentissage
+- Dépendances techniques
+- Moins WYSIWYG
+- Débogage parfois complexe
+:::
+
+:::
+
+---
+
+# Environnements d'édition {.center}
+
+## Tour des outils disponibles
+
+---
+
+## Overleaf : LaTeX en ligne
+
+::: {.incremental}
+- Interface web collaborative
+- Templates académiques
+- Gestion des références (Zotero, Mendeley)
+- Compilation automatique
+- **Demo live** : création d'un document simple
+:::
+
+---
+
+## Typst : le nouveau venu
+
+::: {.incremental}
+- Plus rapide que LaTeX
+- Syntaxe moderne et intuitive
+- Interface web : typst.app
+- Gestion native des packages
+- **Demo live** : comparaison avec LaTeX
+:::
+
+---
+
+## Avant RStudio : les dépendances
+
+### Ce qu'il faut installer
+
+```bash
+# R et RStudio
+sudo apt install r-base r-base-dev
+
+# Quarto
+curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+sudo dpkg -i quarto-linux-amd64.deb
+
+# Packages R essentiels
+install.packages(c("rmarkdown", "knitr", "tinytex"))
+tinytex::install_tinytex()
+```
+
+---
+
+## RStudio et Quarto
+
+::: {.incremental}
+- Environnement intégré pour R/Python/Julia
+- Rendu direct dans l'IDE
+- Support natif de Quarto
+- Aperçu en temps réel
+- **Demo live** : création d'un rapport avec données
+:::
+
+---
+
+## Workflow typique
+
+```{mermaid}
+graph TD
+    A[Données brutes] --> B[Script d'analyse]
+    B --> C[Document Quarto/RMarkdown]
+    C --> D[Compilation]
+    D --> E[PDF/HTML/Slides]
+    E --> F[Publication/Partage]
+    
+    G[Références Zotero] --> C
+    H[Images/Graphiques] --> C
+```
+
+---
+
+## Comparaison des outils
+
+| Outil | Courbe apprentissage | Flexibilité | Collaboration | Vitesse |
+|-------|---------------------|-------------|---------------|---------|
+| Word | 🟢 Facile | 🔴 Limitée | 🟡 Moyenne | 🟢 Rapide |
+| LaTeX | 🔴 Difficile | 🟢 Maximale | 🟡 Moyenne | 🔴 Lente |
+| Markdown/Quarto | 🟡 Moyenne | 🟢 Élevée | 🟢 Excellente | 🟢 Rapide |
+| Typst | 🟡 Moyenne | 🟢 Élevée | 🟡 Moyenne | 🟢 Rapide |
+
+---
+
+## Cas d'usage par discipline
+
+### Sciences sociales quantitatives
+- **Quarto + R** : analyses statistiques intégrées
+- **Jupyter + Python** : machine learning, web scraping
+
+### Sciences sociales qualitatives  
+- **Markdown + Pandoc** : simplicité, focus sur l'écriture
+- **LaTeX** : thèses, articles avec mise en forme complexe
+
+### Méthodes mixtes
+- **Quarto multi-langages** : R + Python + texte
+
+---
+
+## Démonstrations pratiques
+
+::: {.incremental}
+1. **Overleaf** : article avec équations et références
+2. **Typst** : rapport technique moderne
+3. **RStudio + Quarto** : analyse de données intégrée
+4. **Comparaison** : même contenu, différents outils
+:::
+
+---
+
+## Ressources pour aller plus loin
+
+### Documentation
+- [Quarto.org](https://quarto.org)
+- [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
+- [Typst Documentation](https://typst.app/docs)
+
+### Communautés
+- [R-Ladies](https://rladies.org)
+- [Stack Overflow](https://stackoverflow.com)
+- [Discord Typst](https://discord.gg/2uDybryKPe)
+
+---
+
+## Questions et discussion {.center}
+
+### Vos besoins spécifiques ?
+### Obstacles rencontrés ?
+### Projets en cours ?
+
+---
+
+## Merci ! {.center}
+
+### Contact
+- **Email** : votre.email@institution.ca
+- **GitHub** : github.com/votreusername
+- **Mastodon** : @vous@instance.sociale
+
+*Cette présentation est disponible sur GitHub*
