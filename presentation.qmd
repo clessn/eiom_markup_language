@@ -1,6 +1,6 @@
 ---
 title: "Les langages de balisage en sciences sociales"
-subtitle: "Un atelier pratique pour l'EIOM"
+subtitle: "Midi-métho de l'EIOM"
 author: "Étienne Proulx"
 format:
   revealjs:
@@ -215,8 +215,7 @@ graph TD
 ## Merci ! {.center}
 
 ### Contact
-- **Email** : votre.email@institution.ca
-- **GitHub** : github.com/votreusername
-- **Mastodon** : @vous@instance.sociale
+- **Email** : etienne.proulx8@ulaval.ca
+- **GitHub** : github.com/etienneprx
 
-*Cette présentation est disponible sur GitHub*
+*Cette présentation est disponible sur [GitHub](https://github.com/clessn/eiom_markup_language)*
