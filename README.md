@@ -2,6 +2,34 @@
 
 Ce dépôt contient une présentation sur les langages de balisage et des exemples pratiques d'utilisation de Quarto pour la recherche en sciences sociales.
 
+## 💾 Récupérer le projet en local
+
+### Cloner le repository
+
+Pour avoir tous les fichiers sur votre ordinateur :
+
+```bash
+git clone https://github.com/votre-username/eiom_markup_language.git
+cd eiom_markup_language
+```
+
+### Ce que ça vous donne
+
+En ayant le repository en local, vous pouvez :
+
+- **Modifier les fichiers** directement sur votre machine
+- **Tester et compiler** les présentations sans dépendre d'internet
+- **Expérimenter** avec les exemples sans risquer de casser quoi que ce soit
+- **Adapter** les templates à vos propres projets
+- **Travailler hors ligne** une fois Quarto installé
+
+### Prérequis
+
+Avant de commencer, assurez-vous d'avoir :
+- **Git** installé sur votre machine (pour cloner le repo)
+- **Quarto** installé (voir section installation ci-dessous)
+- Optionnel : **RStudio** pour une expérience plus simple
+
 ## 📋 Contenu du dépôt
 
 - **`presentation.qmd`** : Présentation principale sur les langages de balisage
