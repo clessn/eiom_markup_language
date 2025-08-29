@@ -1,0 +1,84 @@
+/* Améliorations esthétiques pour la présentation */
+
+.reveal {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* Titres plus élégants */
+.reveal h1, .reveal h2, .reveal h3 {
+  text-transform: none;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.reveal h2 {
+  color: #3498db;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Code plus lisible */
+.reveal pre code {
+  font-size: 0.8em;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Fragments avec de meilleures transitions */
+.reveal .fragment.fade-in-then-semi-out {
+  opacity: 1;
+}
+
+.reveal .fragment.fade-in-then-semi-out.current-fragment {
+  opacity: 1;
+}
+
+.reveal .fragment.fade-in-then-semi-out.past {
+  opacity: 0.5;
+}
+
+/* Tableaux plus beaux */
+.reveal table {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.reveal th, .reveal td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #34495e;
+}
+
+.reveal th {
+  background-color: #34495e;
+  color: white;
+  font-weight: 600;
+}
+
+.reveal tr:nth-child(even) {
+  background-color: rgba(52, 73, 94, 0.1);
+}
+
+/* Listes avec plus d'espace */
+.reveal ul, .reveal ol {
+  margin: 1em 0;
+}
+
+.reveal li {
+  margin: 0.5em 0;
+}
+
+/* Colonnes mieux équilibrées */
+.reveal .columns {
+  align-items: flex-start;
+}
+
+/* Footer style */
+.reveal .footer {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: 0.5em;
+  color: #7f8c8d;
+}

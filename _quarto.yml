@@ -1,0 +1,16 @@
+
+title: "Outils de rédaction numériques en sciences sociales"
+subtitle: "Les langages de balisage - Midi-métho de l'EIOM"
+author: "Étienne Proulx"
+format:
+  revealjs:
+    theme: night
+    transition: fade
+    highlight-style: dracula
+    code-line-numbers: true
+    chalkboard: true
+    multiplex: false
+    preview-links: auto
+    footer: "EIOM - Langages de balisage | Étienne Proulx"
+    slide-number: true
+    css: ["custom.css"]

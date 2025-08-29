@@ -7,11 +7,11 @@
 <link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Étienne Proulx">
-  <title>Les langages de balisage en sciences sociales</title>
+  <title>Outils de rédaction en sciences sociales numériques</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -59,43 +59,44 @@
       }
     pre.numberSource { margin-left: 3em;  padding-left: 4px; }
     div.sourceCode
-      { color: #24292e;  }
+      { color: #f8f8f2; background-color: #282a36; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #24292e; } /* Normal */
+    code span { color: #f8f8f2; } /* Normal */
     code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #d73a49; } /* Attribute */
-    code span.bn { color: #005cc5; } /* BaseN */
-    code span.bu { color: #d73a49; } /* BuiltIn */
-    code span.cf { color: #d73a49; } /* ControlFlow */
-    code span.ch { color: #032f62; } /* Char */
-    code span.cn { color: #005cc5; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #d73a49; } /* DataType */
-    code span.dv { color: #005cc5; } /* DecVal */
+    code span.an { color: #ff79c6; } /* Annotation */
+    code span.at { color: #ff79c6; } /* Attribute */
+    code span.bn { color: #bd93f9; } /* BaseN */
+    code span.bu { color: #8be9fd; } /* BuiltIn */
+    code span.cf { color: #ff79c6; } /* ControlFlow */
+    code span.ch { color: #f1fa8c; } /* Char */
+    code span.cn { color: #bd93f9; font-weight: bold; } /* Constant */
+    code span.co { color: #6272a4; } /* Comment */
+    code span.cv { color: #8be9fd; } /* CommentVar */
+    code span.do { color: #ffb86c; } /* Documentation */
+    code span.dt { color: #8be9fd; font-style: italic; } /* DataType */
+    code span.dv { color: #bd93f9; } /* DecVal */
     code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
-    code span.fl { color: #005cc5; } /* Float */
-    code span.fu { color: #6f42c1; } /* Function */
-    code span.im { color: #032f62; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #d73a49; } /* Keyword */
-    code span.op { color: #24292e; } /* Operator */
-    code span.ot { color: #6f42c1; } /* Other */
-    code span.pp { color: #d73a49; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #005cc5; } /* SpecialChar */
-    code span.ss { color: #032f62; } /* SpecialString */
-    code span.st { color: #032f62; } /* String */
-    code span.va { color: #e36209; } /* Variable */
-    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.ex { color: #8be9fd; } /* Extension */
+    code span.fl { color: #bd93f9; } /* Float */
+    code span.fu { color: #50fa7b; } /* Function */
+    code span.im { color: #ff79c6; } /* Import */
+    code span.in { color: #f1fa8c; } /* Information */
+    code span.kw { color: #ff79c6; } /* Keyword */
+    code span.op { color: #f8f8f2; } /* Operator */
+    code span.ot { color: #50fa7b; } /* Other */
+    code span.pp { color: #ff79c6; } /* Preprocessor */
+    code span.re { color: #8be9fd; } /* RegionMarker */
+    code span.sc { color: #ff79c6; } /* SpecialChar */
+    code span.ss { color: #f1fa8c; } /* SpecialString */
+    code span.st { color: #f1fa8c; } /* String */
+    code span.va { color: #8be9fd; } /* Variable */
+    code span.vs { color: #f1fa8c; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="custom.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -387,17 +388,14 @@
       margin-right: 0; 
     }
   </style>
-  <script src="presentation_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="presentation_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="presentation_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Les langages de balisage en sciences sociales</h1>
-  <p class="subtitle">Midi-métho de l’EIOM</p>
+  <h1 class="title">Outils de rédaction en sciences sociales numériques</h1>
+  <p class="subtitle">Les langages de balisage - Midi-métho de l’EIOM</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -408,255 +406,375 @@
 </div>
 
 </section>
-<section id="introduction" class="slide level2 center">
+<section id="introduction" class="slide level2 center" data-background-color="#2c3e50">
 <h2>Introduction</h2>
-<div>
-<ul>
-<li class="fragment">Pourquoi utiliser des langages de balisage ?</li>
-<li class="fragment">Avantages pour les étudiant·e·s de l’EIOM</li>
-<li class="fragment">Tour d’horizon des outils disponibles</li>
-</ul>
+<h3 id="quest-ce-quun-langage-de-balisage">Qu’est-ce qu’un langage de balisage ?</h3>
+<div class="fragment fade-in-then-semi-out">
+<p><strong>Balises</strong> entremêlées au texte</p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p>Communication <strong>standardisée</strong> avec l’ordinateur</p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p>Séparation <strong>contenu</strong> et <strong>forme</strong></p>
+</div>
+<div class="fragment fade-in">
+<p>Alternative aux logiciels traditionnels</p>
 </div>
 </section>
-<section id="histoire-et-contexte" class="slide level2">
-<h2>Histoire et contexte</h2>
-<h3 id="doù-viennent-les-langages-de-balisage">D’où viennent les langages de balisage ?</h3>
-<div>
-<ul>
-<li class="fragment"><strong>1960s-70s</strong> : IBM GML (Generalized Markup Language)</li>
-<li class="fragment"><strong>1986</strong> : SGML standardisé (ISO 8879)</li>
-<li class="fragment"><strong>1989</strong> : HTML créé par Tim Berners-Lee</li>
-<li class="fragment"><strong>1998</strong> : XML simplifie SGML</li>
-<li class="fragment"><strong>2004</strong> : Markdown par John Gruber</li>
-</ul>
-</div>
-</section>
-<section id="pourquoi-cest-utile-pour-leiom" class="slide level2">
-<h2>Pourquoi c’est utile pour l’EIOM ?</h2>
-<h3 id="les-défis-de-la-recherche-moderne">Les défis de la recherche moderne</h3>
-<div>
-<ul>
-<li class="fragment"><strong>Reproductibilité</strong> : code et texte dans un seul document</li>
-<li class="fragment"><strong>Collaboration</strong> : versions, commentaires, révisions</li>
-<li class="fragment"><strong>Formats multiples</strong> : PDF, HTML, Word, slides…</li>
-<li class="fragment"><strong>Équations et références</strong> : gestion automatisée</li>
-<li class="fragment"><strong>Intégration données</strong> : graphiques, tableaux dynamiques</li>
-</ul>
-</div>
-</section>
-<section id="avantages-vs.-inconvénients" class="slide level2">
-<h2>Avantages vs.&nbsp;inconvénients</h2>
+<section id="pourquoi-les-langages-de-balisage" class="slide level2">
+<h2>Pourquoi les langages de balisage ?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="avantages">✅ Avantages</h3>
-<ul>
-<li>Séparation contenu/forme</li>
-<li>Contrôle de version (Git)</li>
-<li>Automatisation</li>
-<li>Formats ouverts</li>
-<li>Intégration code/texte</li>
-</ul>
+<h3 id="limites-des-outils-classiques">Limites des outils classiques</h3>
+<div class="fragment">
+<p><strong>Mise en page</strong> difficile à maîtriser</p>
+</div>
+<div class="fragment">
+<p><strong>Qualité graphique</strong> limitée</p>
+</div>
+<div class="fragment">
+<p><strong>Intégration code</strong> problématique</p>
+</div>
 </div><div class="column" style="width:50%;">
-<h3 id="inconvénients">❌ Inconvénients</h3>
-<ul>
-<li>Courbe d’apprentissage</li>
-<li>Dépendances techniques</li>
-<li>Moins WYSIWYG</li>
-<li>Débogage parfois complexe</li>
-</ul>
+<h3 id="solutions-avec-le-balisage">Solutions avec le balisage</h3>
+<div class="fragment">
+<p><strong>Automatisation</strong> complète</p>
+</div>
+<div class="fragment">
+<p><strong>Reproductibilité</strong> garantie</p>
+</div>
+<div class="fragment">
+<p><strong>Contrôle</strong> total du rendu</p>
+</div>
 </div></div>
 </section>
-<section class="slide level2">
-
-</section>
-<section>
-<section id="environnements-dédition" class="title-slide slide level1 center">
-<h1>Environnements d’édition</h1>
-
-</section>
-<section id="tour-des-outils-disponibles" class="slide level2">
-<h2>Tour des outils disponibles</h2>
-</section>
-<section id="overleaf-latex-en-ligne" class="slide level2">
-<h2>Overleaf : LaTeX en ligne</h2>
-<div>
+<section id="les-trois-niveaux-dabstraction" class="slide level2">
+<h2>Les trois niveaux d’abstraction</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="syntaxe-complexe">Syntaxe complexe</h3>
 <ul>
-<li class="fragment">Interface web collaborative</li>
-<li class="fragment">Templates académiques</li>
-<li class="fragment">Gestion des références (Zotero, Mendeley)</li>
-<li class="fragment">Compilation automatique</li>
-<li class="fragment"><strong>Demo live</strong> : création d’un document simple</li>
+<li>HTML, XML</li>
+<li>LaTeX</li>
+<li>Contrôle maximal</li>
+<li>Courbe d’apprentissage élevée</li>
 </ul>
 </div>
-</section>
-<section id="typst-le-nouveau-venu" class="slide level2">
-<h2>Typst : le nouveau venu</h2>
-<div>
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="syntaxe-simplifiée">Syntaxe simplifiée</h3>
 <ul>
-<li class="fragment">Plus rapide que LaTeX</li>
-<li class="fragment">Syntaxe moderne et intuitive</li>
-<li class="fragment">Interface web : typst.app</li>
-<li class="fragment">Gestion native des packages</li>
-<li class="fragment"><strong>Demo live</strong> : comparaison avec LaTeX</li>
+<li>Markdown</li>
+<li>Syntaxe intuitive</li>
+<li>Focus sur le contenu</li>
+<li>Conversion multiple formats</li>
 </ul>
 </div>
-</section>
-<section id="avant-rstudio-les-dépendances" class="slide level2">
-<h2>Avant RStudio : les dépendances</h2>
-<h3 id="ce-quil-faut-installer">Ce qu’il faut installer</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="co"># R et RStudio</span></span>
-<span id="cb1-2"><a href=""></a><span class="fu">sudo</span> apt install r-base r-base-dev</span>
-<span id="cb1-3"><a href=""></a></span>
-<span id="cb1-4"><a href=""></a><span class="co"># Quarto</span></span>
-<span id="cb1-5"><a href=""></a><span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb</span>
-<span id="cb1-6"><a href=""></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> quarto-linux-amd64.deb</span>
-<span id="cb1-7"><a href=""></a></span>
-<span id="cb1-8"><a href=""></a><span class="co"># Packages R essentiels</span></span>
-<span id="cb1-9"><a href=""></a><span class="ex">install.packages</span><span class="er">(</span><span class="ex">c</span><span class="er">(</span><span class="st">"rmarkdown"</span><span class="ex">,</span> <span class="st">"knitr"</span>, <span class="st">"tinytex"</span><span class="kw">))</span></span>
-<span id="cb1-10"><a href=""></a><span class="fu">tinytex::install_tinytex()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="rstudio-et-quarto" class="slide level2">
-<h2>RStudio et Quarto</h2>
-<div>
+<div class="fragment fade-in">
+<!-- -->
+<h3 id="publication-computationnelle">Publication computationnelle</h3>
 <ul>
-<li class="fragment">Environnement intégré pour R/Python/Julia</li>
-<li class="fragment">Rendu direct dans l’IDE</li>
-<li class="fragment">Support natif de Quarto</li>
-<li class="fragment">Aperçu en temps réel</li>
-<li class="fragment"><strong>Demo live</strong> : création d’un rapport avec données</li>
+<li>R Markdown</li>
+<li>Quarto</li>
+<li>Intégration code/texte</li>
+<li>Recherche reproductible</li>
 </ul>
 </div>
-</section>
-<section id="workflow-typique" class="slide level2">
-<h2>Workflow typique</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph TD
-    A[Données brutes] --&gt; B[Script d'analyse]
-    B --&gt; C[Document Quarto/RMarkdown]
-    C --&gt; D[Compilation]
-    D --&gt; E[PDF/HTML/Slides]
-    E --&gt; F[Publication/Partage]
-    
-    G[Références Zotero] --&gt; C
-    H[Images/Graphiques] --&gt; C
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
 </div>
 </section>
-<section id="comparaison-des-outils" class="slide level2">
-<h2>Comparaison des outils</h2>
+<section id="quand-choisir-quoi" class="slide level2">
+<h2>Quand choisir quoi ?</h2>
+<h3 id="complexité-vs.-facilité-dusage">Complexité vs.&nbsp;Facilité d’usage</h3>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Outil</th>
-<th>Courbe apprentissage</th>
-<th>Flexibilité</th>
-<th>Collaboration</th>
-<th>Vitesse</th>
+<th>Document</th>
+<th style="text-align: center;">Word</th>
+<th style="text-align: center;">Markdown</th>
+<th style="text-align: center;">LaTeX</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Word</td>
-<td>🟢 Facile</td>
-<td>🔴 Limitée</td>
-<td>🟡 Moyenne</td>
-<td>🟢 Rapide</td>
+<td>Note rapide</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td>LaTeX</td>
-<td>🔴 Difficile</td>
-<td>🟢 Maximale</td>
-<td>🟡 Moyenne</td>
-<td>🔴 Lente</td>
+<td>Article simple</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td>Markdown/Quarto</td>
-<td>🟡 Moyenne</td>
-<td>🟢 Élevée</td>
-<td>🟢 Excellente</td>
-<td>🟢 Rapide</td>
+<td>Mémoire/thèse</td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
 </tr>
 <tr class="even">
-<td>Typst</td>
-<td>🟡 Moyenne</td>
-<td>🟢 Élevée</td>
-<td>🟡 Moyenne</td>
-<td>🟢 Rapide</td>
+<td>Article avec équations</td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">⚠️</td>
+<td style="text-align: center;">✓</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="cas-dusage-par-discipline" class="slide level2">
-<h2>Cas d’usage par discipline</h2>
-<h3 id="sciences-sociales-quantitatives">Sciences sociales quantitatives</h3>
+<section id="les-quatre-forces" class="slide level2" data-background-color="#34495e">
+<h2>Les quatre forces</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="automatisation">Automatisation</h3>
 <ul>
-<li><strong>Quarto + R</strong> : analyses statistiques intégrées</li>
-<li><strong>Jupyter + Python</strong> : machine learning, web scraping</li>
+<li>Numérotation figures/tableaux</li>
+<li>Bibliographie automatique<br>
+</li>
+<li>Table des matières dynamique</li>
 </ul>
-<h3 id="sciences-sociales-qualitatives">Sciences sociales qualitatives</h3>
+</div>
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="reproductibilité">Reproductibilité</h3>
 <ul>
-<li><strong>Markdown + Pandoc</strong> : simplicité, focus sur l’écriture</li>
-<li><strong>LaTeX</strong> : thèses, articles avec mise en forme complexe</li>
+<li>Code exécutable intégré</li>
+<li>Données liées au texte</li>
+<li>Résultats toujours à jour</li>
 </ul>
-<h3 id="méthodes-mixtes">Méthodes mixtes</h3>
+</div>
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="flexibilité">Flexibilité</h3>
 <ul>
-<li><strong>Quarto multi-langages</strong> : R + Python + texte</li>
+<li>Formats multiples (PDF, HTML, DOCX)</li>
+<li>Adaptation aux contraintes</li>
+<li>Intégration langages variés</li>
+</ul>
+</div>
+<div class="fragment fade-in">
+<!-- -->
+<h3 id="qualité">Qualité</h3>
+<ul>
+<li>Graphiques vectoriels</li>
+<li>Typographie professionnelle</li>
+<li>Présentation cohérente</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="focus-la-gestion-des-références" class="slide level2">
+<h2>Focus : La gestion des références</h2>
+<h3 id="avec-bibtex">Avec BibTeX</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bibtex number-lines code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href=""></a><span class="va">@article</span>{<span class="ot">goldfarb96</span>,</span>
+<span id="cb1-2"><a href=""></a>  <span class="dt">title</span>={The Roots of SGML: A Personal Recollection},</span>
+<span id="cb1-3"><a href=""></a>  <span class="dt">author</span>={Goldfarb, Charles F},</span>
+<span id="cb1-4"><a href=""></a>  <span class="dt">journal</span>={Technical communication},</span>
+<span id="cb1-5"><a href=""></a>  <span class="dt">volume</span>={46},</span>
+<span id="cb1-6"><a href=""></a>  <span class="dt">number</span>={1},</span>
+<span id="cb1-7"><a href=""></a>  <span class="dt">pages</span>={75},</span>
+<span id="cb1-8"><a href=""></a>  <span class="dt">year</span>={1999}</span>
+<span id="cb1-9"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Avantages</strong> : Import direct, styles automatiques, liens cliquables</p>
+</section>
+<section id="focus-intégration-code-et-données" class="slide level2">
+<h2>Focus : Intégration code et données</h2>
+<h3 id="le-code-quarto">Le code Quarto</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co">#| label: fig-mtcars</span></span>
+<span id="cb2-2"><a href=""></a><span class="co">#| fig-cap: "Relation puissance-consommation"</span></span>
+<span id="cb2-3"><a href=""></a><span class="co">#| echo: true</span></span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-6"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-7"><a href=""></a></span>
+<span id="cb2-8"><a href=""></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb2-9"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
+<span id="cb2-10"><a href=""></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">factor</span>(cyl)), </span>
+<span id="cb2-11"><a href=""></a>             <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Puissance (HP)"</span>, </span>
+<span id="cb2-14"><a href=""></a>       <span class="at">y =</span> <span class="st">"Consommation (MPG)"</span>,</span>
+<span id="cb2-15"><a href=""></a>       <span class="at">color =</span> <span class="st">"Cylindres"</span>) <span class="sc">+</span></span>
+<span id="cb2-16"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="le-résultat-généré" class="slide level2">
+<h2>Le résultat généré</h2>
+
+<img data-src="presentation_files/figure-revealjs/fig-mtcars-demo-1.png" width="768" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1: Relation puissance-consommation
+</p><p><strong>Le graphique <a href="#/fig-mtcars-demo" class="quarto-xref">Figure&nbsp;1</a> est référencé automatiquement</strong></p>
+</section>
+<section id="environnements-dédition---bureau" class="slide level2 smaller">
+<h2>Environnements d’édition - Bureau</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="rstudio">RStudio</h3>
+<ul>
+<li>Intégré pour R/Python/Julia</li>
+<li>Excellent pour Quarto/R Markdown</li>
+<li>Écosystème de packages</li>
+<li><strong>Limite</strong> : Correction orthographique</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="vs-code">VS Code</h3>
+<ul>
+<li>Polyvalent, tous langages</li>
+<li>Extensions LanguageTool/Antidote</li>
+<li>Git intégré</li>
+<li><strong>Recommandé</strong> pour la rédaction</li>
+</ul>
+</div></div>
+<h3 id="positron-nouveau">Positron (nouveau)</h3>
+<ul>
+<li>Basé sur VS Code par l’équipe qui développe RStudio</li>
 </ul>
 </section>
-<section id="démonstrations-pratiques" class="slide level2">
-<h2>Démonstrations pratiques</h2>
+<section id="éditeurs-en-ligne" class="slide level2 smaller">
+<h2>Éditeurs en ligne</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="overleaf">Overleaf</h3>
 <div>
+<ul>
+<li class="fragment">Collaboration en temps réel</li>
+<li class="fragment">Pas d’installation nécessaire</li>
+<li class="fragment">Milliers de gabarits académiques</li>
+<li class="fragment"><strong>Limitation</strong> : LaTeX uniquement, connexion requise</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="typst-typst.app">Typst (typst.app)</h3>
+<div>
+<ul>
+<li class="fragment">Syntaxe moderne, plus simple que LaTeX</li>
+<li class="fragment">Compilation rapide</li>
+<li class="fragment"><strong>Nouveau</strong> : communauté grandissante</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="les-défis-à-anticiper" class="slide level2 smaller" data-background-color="#34495e">
+<h2>Les défis à anticiper</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="inconvénients">Inconvénients</h3>
+<ul>
+<li>Courbe d’apprentissage initiale</li>
+<li>Compilation nécessaire (15-30 secondes)</li>
+<li>Collaboration moins intuitive qu’avec Word</li>
+<li>Correction linguistique française limitée (RStudio)</li>
+<li>Conversions vers Word parfois imparfaites</li>
+<li>Les revues scientifiques n’acceptent pas toujours les pdfs</li>
+</ul>
+</div>
+<div class="fragment fade-in">
+<!-- -->
+<h3 id="solutions">Solutions</h3>
+<ul>
+<li>Cheat sheets en ligne</li>
+<li>IA générative (ChatGPT)</li>
+<li>Éditeurs en ligne</li>
+<li>Pandoc pour conversions</li>
+<li>Lire les exigences des revues au préalable</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="quel-outil-choisir" class="slide level2">
+<h2>Quel outil choisir ?</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="latex">LaTeX</h3>
+<div class="fragment">
+<p><strong>Parfait pour</strong></p>
+<ul>
+<li>Articles académiques</li>
+<li>Thèses complexes</li>
+<li>Mathématiques avancées</li>
+</ul>
+</div>
+</div><div class="column" style="width:33%;">
+<h3 id="quarto">Quarto</h3>
+<div class="fragment">
+<p><strong>Recommandé pour</strong></p>
+<ul>
+<li>Analyses de données</li>
+<li>Recherche reproductible</li>
+<li>Présentation</li>
+</ul>
+</div>
+</div><div class="column" style="width:33%;">
+<h3 id="markdown">Markdown</h3>
+<div class="fragment">
+<p><strong>Idéal pour</strong></p>
+<ul>
+<li>Document simple</li>
+<li>Notes sur des applications comme Notion ou Slack</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="conseils-pratiques" class="slide level2">
+<h2>Conseils pratiques</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<!-- -->
+<h3 id="parcours-recommandé">Parcours recommandé</h3>
 <ol type="1">
-<li class="fragment"><strong>Overleaf</strong> : article avec équations et références</li>
-<li class="fragment"><strong>Typst</strong> : rapport technique moderne</li>
-<li class="fragment"><strong>RStudio + Quarto</strong> : analyse de données intégrée</li>
-<li class="fragment"><strong>Comparaison</strong> : même contenu, différents outils</li>
+<li><strong>Commencer</strong> en utilisant les éditeurs en lignes</li>
+<li><strong>Utiliser</strong> les gabarits disponibles</li>
+<li><strong>Installer</strong> <a href="https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html">Quarto</a> et le package R <a href="https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html">TinyTeX</a></li>
+<li><strong>Intégrer</strong> progressivement Git/GitHub</li>
+<li><strong>Rester</strong> curieux</li>
 </ol>
 </div>
+<div class="fragment fade-in">
+<!-- -->
+<h3 id="ressources-daide">Ressources d’aide</h3>
+<ul>
+<li>Stack Overflow, ChatGPT ou autre LLM</li>
+<li>Documentation <a href="https://quarto.org/docs/guide/">Quarto</a></li>
+<li>Documentation <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">LaTeX</a></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="ressources-pour-aller-plus-loin" class="slide level2">
-<h2>Ressources pour aller plus loin</h2>
-<h3 id="documentation">Documentation</h3>
+<section id="démonstration-pratique" class="slide level2 center">
+<h2>Démonstration pratique</h2>
+<ul>
+<li>Les bases: Overleaf et Typst</li>
+<li>Installation de <a href="https://quarto.org/docs/get-started/">Quarto</a> et <a href="https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html">TinyTeX</a></li>
+<li>Gabarits d’articles <a href="https://www.overleaf.com/latex/templates/tagged/academic-journal">LaTeX</a> et <a href="https://quarto.org/docs/journals/">Quarto</a></li>
+<li>Gabarits <a href="https://www.overleaf.com/latex/templates?q=Universit%C3%A9+Laval">Ulaval</a></li>
+<li>Questions? Suggestions?</li>
+</ul>
+</section>
+<section id="prochaines-étapes" class="slide level2">
+<h2>Prochaines étapes</h2>
+<p>Essayez Quarto ou LaTeX pour votre projet final de l’EIOM !</p>
+</section>
+<section id="contact-et-ressources" class="slide level2 center">
+<h2>Contact et ressources</h2>
+<h3 id="étienne-proulx">Étienne Proulx</h3>
+<p><strong>Email</strong> : etienne.proulx8@ulaval.ca<br>
+<strong>GitHub</strong> : github.com/etienneprx</p>
+<h3 id="liens-utiles">Liens utiles</h3>
 <ul>
 <li><a href="https://quarto.org">Quarto.org</a></li>
-<li><a href="https://en.wikibooks.org/wiki/LaTeX">LaTeX Wikibook</a></li>
-<li><a href="https://typst.app/docs">Typst Documentation</a></li>
+<li><a href="https://www.overleaf.com/latex/templates">Overleaf Templates</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></li>
 </ul>
-<h3 id="communautés">Communautés</h3>
-<ul>
-<li><a href="https://rladies.org">R-Ladies</a></li>
-<li><a href="https://stackoverflow.com">Stack Overflow</a></li>
-<li><a href="https://discord.gg/2uDybryKPe">Discord Typst</a></li>
-</ul>
-</section>
-<section id="questions-et-discussion" class="slide level2 center">
-<h2>Questions et discussion</h2>
-<h3 id="vos-besoins-spécifiques">Vos besoins spécifiques ?</h3>
-<h3 id="obstacles-rencontrés">Obstacles rencontrés ?</h3>
-<h3 id="projets-en-cours">Projets en cours ?</h3>
-</section>
-<section id="merci" class="slide level2 center">
-<h2>Merci !</h2>
-<h3 id="contact">Contact</h3>
-<ul>
-<li><strong>Email</strong> : etienne.proulx8@ulaval.ca</li>
-<li><strong>GitHub</strong> : github.com/etienneprx</li>
-</ul>
-<p><em>Cette présentation est disponible sur <a href="https://github.com/clessn/eiom_markup_language">GitHub</a></em></p>
+<p><em>Cette présentation et les démos sont disponibles sur GitHub</em></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-
+<p>EIOM - Langages de balisage | Étienne Proulx</p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -710,7 +828,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -815,7 +933,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -869,6 +987,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

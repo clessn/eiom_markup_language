@@ -1,221 +1,376 @@
----
-title: "Les langages de balisage en sciences sociales"
-subtitle: "Midi-métho de l'EIOM"
-author: "Étienne Proulx"
-format:
-  revealjs:
-    theme: default
-    transition: slide
-    highlight-style: github
-    code-line-numbers: true
-    chalkboard: true
-    multiplex: false
-    preview-links: auto
----
+## Introduction {.center data-background-color="#2c3e50"}
 
-## Introduction {.center}
+### Qu'est-ce qu'un langage de balisage ?
 
-::: {.incremental}
-- Pourquoi utiliser des langages de balisage ?
-- Avantages pour les étudiant·e·s de l'EIOM
-- Tour d'horizon des outils disponibles
+::: {.fragment .fade-in-then-semi-out}
+**Balises** entremêlées au texte
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Communication **standardisée** avec l'ordinateur
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Séparation **contenu** et **forme**
+:::
+
+::: {.fragment .fade-in}
+Alternative aux logiciels traditionnels
 :::
 
 ---
 
-## Histoire et contexte
-
-### D'où viennent les langages de balisage ?
-
-::: {.incremental}
-- **1960s-70s** : IBM GML (Generalized Markup Language)
-- **1986** : SGML standardisé (ISO 8879)
-- **1989** : HTML créé par Tim Berners-Lee
-- **1998** : XML simplifie SGML
-- **2004** : Markdown par John Gruber
-:::
-
----
-
-## Pourquoi c'est utile pour l'EIOM ?
-
-### Les défis de la recherche moderne
-
-::: {.incremental}
-- **Reproductibilité** : code et texte dans un seul document
-- **Collaboration** : versions, commentaires, révisions
-- **Formats multiples** : PDF, HTML, Word, slides...
-- **Équations et références** : gestion automatisée
-- **Intégration données** : graphiques, tableaux dynamiques
-:::
-
----
-
-## Avantages vs. inconvénients
+## Pourquoi les langages de balisage ?
 
 ::: {.columns}
+::: {.column width="50%"}
+### Limites des outils classiques
+
+::: {.fragment}
+**Mise en page** difficile à maîtriser
+:::
+
+::: {.fragment}
+**Qualité graphique** limitée
+:::
+
+::: {.fragment}
+**Intégration code** problématique
+:::
+:::
 
 ::: {.column width="50%"}
-### ✅ Avantages
-- Séparation contenu/forme
-- Contrôle de version (Git)
-- Automatisation
-- Formats ouverts
+### Solutions avec le balisage
+
+::: {.fragment}
+**Automatisation** complète
+:::
+
+::: {.fragment}
+**Reproductibilité** garantie
+:::
+
+::: {.fragment}
+**Contrôle** total du rendu
+:::
+:::
+:::
+
+---
+
+## Les trois niveaux d'abstraction
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+### Syntaxe complexe
+- HTML, XML
+- LaTeX
+- Contrôle maximal
+- Courbe d'apprentissage élevée
+:::
+::: {.fragment .fade-in-then-out}
+### Syntaxe simplifiée
+- Markdown
+- Syntaxe intuitive
+- Focus sur le contenu
+- Conversion multiple formats
+:::
+::: {.fragment .fade-in}
+### Publication computationnelle
+- R Markdown
+- Quarto
 - Intégration code/texte
+- Recherche reproductible
+:::
+:::
+
+---
+
+## Quand choisir quoi ?
+
+### Complexité vs. Facilité d'usage
+
+| Document | Word | Markdown | LaTeX |
+|----------|:----:|:--------:|:-----:|
+| Note rapide | ✓ | | |
+| Article simple | ✓ | ✓ |  |
+| Mémoire/thèse | ✗ | ✓ | ✓ |
+| Article avec équations | ✗ | ⚠️ | ✓ |
+
+---
+
+## Les quatre forces {data-background-color="#34495e"}
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+### Automatisation
+- Numérotation figures/tableaux
+- Bibliographie automatique  
+- Table des matières dynamique
+:::
+
+::: {.fragment .fade-in-then-out}
+### Reproductibilité
+- Code exécutable intégré
+- Données liées au texte
+- Résultats toujours à jour
+:::
+
+::: {.fragment .fade-in-then-out}
+### Flexibilité
+- Formats multiples (PDF, HTML, DOCX)
+- Adaptation aux contraintes
+- Intégration langages variés
+:::
+
+::: {.fragment .fade-in}
+### Qualité
+- Graphiques vectoriels
+- Typographie professionnelle
+- Présentation cohérente
+:::
+:::
+
+---
+
+## Focus : La gestion des références
+
+### Avec BibTeX
+
+```bibtex
+@article{goldfarb96,
+  title={The Roots of SGML: A Personal Recollection},
+  author={Goldfarb, Charles F},
+  journal={Technical communication},
+  volume={46},
+  number={1},
+  pages={75},
+  year={1999}
+}
+```
+
+**Avantages** : Import direct, styles automatiques, liens cliquables
+
+---
+
+## Focus : Intégration code et données
+
+### Le code Quarto
+
+```r
+#| label: fig-mtcars
+#| fig-cap: "Relation puissance-consommation"
+#| echo: true
+
+library(ggplot2)
+library(dplyr)
+
+mtcars %>% 
+  ggplot(aes(x = hp, y = mpg)) +
+  geom_point(aes(color = factor(cyl)), 
+             size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm") +
+  labs(x = "Puissance (HP)", 
+       y = "Consommation (MPG)",
+       color = "Cylindres") +
+  theme_minimal()
+```
+
+---
+
+## Le résultat généré
+
+```{r}
+#| label: fig-mtcars-demo
+#| fig-cap: "Relation puissance-consommation"
+#| echo: false
+#| warning: false
+#| fig-width: 8
+#| fig-height: 6
+
+library(ggplot2)
+library(dplyr)
+
+mtcars %>% 
+  ggplot(aes(x = hp, y = mpg)) +
+  geom_point(aes(color = factor(cyl)), 
+             size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", 
+              color = "red", 
+              linetype = "dashed") +
+  labs(x = "Puissance (HP)", 
+       y = "Consommation (MPG)",
+       color = "Cylindres") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+**Le graphique @fig-mtcars-demo est référencé automatiquement**
+
+---
+
+## Environnements d'édition - Bureau {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+### RStudio
+- Intégré pour R/Python/Julia
+- Excellent pour Quarto/R Markdown
+- Écosystème de packages
+- **Limite** : Correction orthographique
 :::
 
 ::: {.column width="50%"}
-### ❌ Inconvénients  
-- Courbe d'apprentissage
-- Dépendances techniques
-- Moins WYSIWYG
-- Débogage parfois complexe
+### VS Code
+- Polyvalent, tous langages
+- Extensions LanguageTool/Antidote
+- Git intégré
+- **Recommandé** pour la rédaction
+:::
 :::
 
-:::
+### Positron (nouveau)
+- Basé sur VS Code par l'équipe qui développe RStudio
 
 ---
 
-# Environnements d'édition {.center}
+## Éditeurs en ligne {.smaller}
 
-## Tour des outils disponibles
-
----
-
-## Overleaf : LaTeX en ligne
-
+::: {.columns}
+::: {.column width="50%"}
+### Overleaf
 ::: {.incremental}
-- Interface web collaborative
-- Templates académiques
-- Gestion des références (Zotero, Mendeley)
-- Compilation automatique
-- **Demo live** : création d'un document simple
+- Collaboration en temps réel
+- Pas d'installation nécessaire
+- Milliers de gabarits académiques
+- **Limitation** : LaTeX uniquement, connexion requise
+:::
 :::
 
----
-
-## Typst : le nouveau venu
-
+::: {.column width="50%"}
+### Typst (typst.app)
 ::: {.incremental}
-- Plus rapide que LaTeX
-- Syntaxe moderne et intuitive
-- Interface web : typst.app
-- Gestion native des packages
-- **Demo live** : comparaison avec LaTeX
+- Syntaxe moderne, plus simple que LaTeX
+- Compilation rapide
+- **Nouveau** : communauté grandissante
+:::
+:::
 :::
 
 ---
 
-## Avant RStudio : les dépendances
-
-### Ce qu'il faut installer
-
-```bash
-# R et RStudio
-sudo apt install r-base r-base-dev
-
-# Quarto
-curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
-sudo dpkg -i quarto-linux-amd64.deb
-
-# Packages R essentiels
-install.packages(c("rmarkdown", "knitr", "tinytex"))
-tinytex::install_tinytex()
-```
-
----
-
-## RStudio et Quarto
-
-::: {.incremental}
-- Environnement intégré pour R/Python/Julia
-- Rendu direct dans l'IDE
-- Support natif de Quarto
-- Aperçu en temps réel
-- **Demo live** : création d'un rapport avec données
+## Les défis à anticiper {.smaller data-background-color="#34495e"}
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+### Inconvénients 
+- Courbe d'apprentissage initiale
+- Compilation nécessaire (15-30 secondes)
+- Collaboration moins intuitive qu'avec Word
+- Correction linguistique française limitée (RStudio)
+- Conversions vers Word parfois imparfaites
+- Les revues scientifiques n'acceptent pas toujours les pdfs
+:::
+::: {.fragment .fade-in}
+### Solutions
+- Cheat sheets en ligne
+- IA générative (ChatGPT)
+- Éditeurs en ligne
+- Pandoc pour conversions
+- Lire les exigences des revues au préalable
+:::
 :::
 
 ---
 
-## Workflow typique
+## Quel outil choisir ?
 
-```{mermaid}
-graph TD
-    A[Données brutes] --> B[Script d'analyse]
-    B --> C[Document Quarto/RMarkdown]
-    C --> D[Compilation]
-    D --> E[PDF/HTML/Slides]
-    E --> F[Publication/Partage]
-    
-    G[Références Zotero] --> C
-    H[Images/Graphiques] --> C
-```
+::: {.columns}
+::: {.column width="33%"}
+### LaTeX
+::: {.fragment}
+**Parfait pour**
 
----
+- Articles académiques
+- Thèses complexes
+- Mathématiques avancées
+  
+:::
+:::
 
-## Comparaison des outils
+::: {.column width="33%"}
+### Quarto
+::: {.fragment}
+**Recommandé pour**
 
-| Outil | Courbe apprentissage | Flexibilité | Collaboration | Vitesse |
-|-------|---------------------|-------------|---------------|---------|
-| Word | 🟢 Facile | 🔴 Limitée | 🟡 Moyenne | 🟢 Rapide |
-| LaTeX | 🔴 Difficile | 🟢 Maximale | 🟡 Moyenne | 🔴 Lente |
-| Markdown/Quarto | 🟡 Moyenne | 🟢 Élevée | 🟢 Excellente | 🟢 Rapide |
-| Typst | 🟡 Moyenne | 🟢 Élevée | 🟡 Moyenne | 🟢 Rapide |
+- Analyses de données
+- Recherche reproductible
+- Présentation
+  
+:::
+:::
 
----
+::: {.column width="33%"}
+### Markdown
+::: {.fragment}
+**Idéal pour**
 
-## Cas d'usage par discipline
+- Document simple
+- Notes sur des applications comme Notion ou Slack
 
-### Sciences sociales quantitatives
-- **Quarto + R** : analyses statistiques intégrées
-- **Jupyter + Python** : machine learning, web scraping
-
-### Sciences sociales qualitatives  
-- **Markdown + Pandoc** : simplicité, focus sur l'écriture
-- **LaTeX** : thèses, articles avec mise en forme complexe
-
-### Méthodes mixtes
-- **Quarto multi-langages** : R + Python + texte
-
----
-
-## Démonstrations pratiques
-
-::: {.incremental}
-1. **Overleaf** : article avec équations et références
-2. **Typst** : rapport technique moderne
-3. **RStudio + Quarto** : analyse de données intégrée
-4. **Comparaison** : même contenu, différents outils
+:::
+:::
 :::
 
 ---
 
-## Ressources pour aller plus loin
+## Conseils pratiques
 
-### Documentation
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+### Parcours recommandé
+
+1. **Commencer** en utilisant les éditeurs en lignes
+2. **Utiliser** les gabarits disponibles
+3. **Installer** [Quarto](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html) et le package R [TinyTeX](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html)
+4. **Intégrer** progressivement Git/GitHub
+5. **Rester** curieux
+:::
+
+::: {.fragment .fade-in}
+### Ressources d'aide
+- Stack Overflow, ChatGPT ou autre LLM
+- Documentation [Quarto](https://quarto.org/docs/guide/)
+- Documentation [LaTeX](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+
+:::
+:::
+
+---
+
+## Démonstration pratique {.center}
+
+- Les bases: Overleaf et Typst
+- Installation de [Quarto](https://quarto.org/docs/get-started/) et [TinyTeX](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html)
+- Gabarits d'articles [LaTeX](https://www.overleaf.com/latex/templates/tagged/academic-journal) et [Quarto](https://quarto.org/docs/journals/)
+- Gabarits [Ulaval](https://www.overleaf.com/latex/templates?q=Universit%C3%A9+Laval)
+- Questions? Suggestions?
+
+---
+
+## Prochaines étapes
+Essayez Quarto ou LaTeX pour votre projet final de l'EIOM !
+
+---
+
+## Contact et ressources {.center}
+
+### Étienne Proulx
+**Email** : etienne.proulx8@ulaval.ca  
+**GitHub** : github.com/etienneprx
+
+### Liens utiles
 - [Quarto.org](https://quarto.org)
-- [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
-- [Typst Documentation](https://typst.app/docs)
+- [Overleaf Templates](https://www.overleaf.com/latex/templates)
+- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 
-### Communautés
-- [R-Ladies](https://rladies.org)
-- [Stack Overflow](https://stackoverflow.com)
-- [Discord Typst](https://discord.gg/2uDybryKPe)
+*Cette présentation et les démos sont disponibles sur GitHub*
 
----
-
-## Questions et discussion {.center}
-
-### Vos besoins spécifiques ?
-### Obstacles rencontrés ?
-### Projets en cours ?
-
----
-
-## Merci ! {.center}
-
-### Contact
-- **Email** : etienne.proulx8@ulaval.ca
-- **GitHub** : github.com/etienneprx
-
-*Cette présentation est disponible sur [GitHub](https://github.com/clessn/eiom_markup_language)*

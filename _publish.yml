@@ -1,0 +1,4 @@
+- source: presentation.qmd
+  quarto-pub:
+    - id: 36420786-929c-416d-b1fe-5d3036bbd7ad
+      url: 'https://codeur-prx.quarto.pub/outils-de-rédaction-en-sciences-sociales-numériques'
